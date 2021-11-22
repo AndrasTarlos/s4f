@@ -5,7 +5,11 @@
  */
 
 function findDigit(num, nth) {
-    // TODO
+    if (nth <= 0) return -1;
+    var txt = Math.abs(num).toString();
+    var pos = txt.length - nth;
+    if (pos < 0) return 0;
+    return Number(txt[pos]);
 }
 
 console.log(findDigit(5673, 4));  // 5

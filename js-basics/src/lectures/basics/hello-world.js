@@ -5,7 +5,9 @@
  */
 
 class Solution {
-    // TODO
+    static main() {
+        console.log("Hello World!");
+    }
 }
 
 Solution.main("greetings from Javatlacati!"); // -> displays "Hello World!" to the console
