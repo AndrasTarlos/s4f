@@ -3,7 +3,24 @@
 
 
 def remove_duplicate_ids(obj):
-    pass
+    def convert_to_int(text):
+        return int(text)
+
+    def sort_keys(keys):
+        # https://www.w3schools.com/python/ref_func_sorted.asp
+        return sorted(keys, key=convert_to_int, reverse=True)
+        return sorted(keys, key=lambda x: int(x), reverse=True)
+        return sorted(keys, key=int, reverse=True)
+
+    result = {}
+    seen = set()
+    for k in sort_keys(obj.keys()):
+        result[k] = []
+        for v in obj[k]:
+            if v not in seen:
+                result[k].append(v)
+            seen.add(v)
+    return result
 
 
 inputs = [

@@ -8,7 +8,8 @@ und mit 'max' zu erstellen. Verwenden Sie List.append() und benutzen Sie die nac
 
 def list_from_range(min, max):
     my_list = []
-    # TODO
+    for element in range(min, max + 1):
+        my_list.append(element)
     return my_list
 
 

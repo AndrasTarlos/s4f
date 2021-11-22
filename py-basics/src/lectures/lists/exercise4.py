@@ -18,9 +18,17 @@ Benutzen Sie wiederum die nachfolgenden Tests zur Kontrolle.
 """
 
 
+import copy
+
+
 def move(my_list, index, offset):
-    # TODO
-    return []
+    position = index + offset
+    if position < 0:
+        return "Invalid offset."
+    result = copy.copy(my_list)
+    element = result.pop(index)
+    result.insert(position, element)
+    return result
 
 
 print(move([1, 2, 3, 4], 1, -1))  # -> [2, 1, 3, 4]

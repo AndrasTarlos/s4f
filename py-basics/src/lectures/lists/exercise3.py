@@ -8,7 +8,9 @@ Elemente 'excluded' darin enthalten sind. Benutzen Sie die nachfolgenden Tests z
 
 def except_for(my_list, excluded):
     result = []
-    # TODO
+    for element in my_list:
+        if element not in excluded:
+            result.append(element)
     return result
 
 

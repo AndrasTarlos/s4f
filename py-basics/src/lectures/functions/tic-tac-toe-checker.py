@@ -3,8 +3,20 @@
 
 
 def is_solved(board):
-    # TODO: Check if the board is solved!
-    return -1
+    for i in range(3):
+        if board[i][0] == board[i][1] == board[i][2] != 0:
+            return board[i][0]
+    for i in range(3):
+        if board[0][i] == board[1][i] == board[2][i] != 0:
+            return board[0][i]
+    if board[0][0] == board[1][1] == board[2][2] != 0:
+        return board[0][0]
+    elif board[0][2] == board[1][1] == board[2][0] != 0:
+        return board[0][2]
+    elif 0 in board[0] or 0 in board[1] or 0 in board[2]:
+        return -1
+    else:
+        return 0
 
 
 print(is_solved([

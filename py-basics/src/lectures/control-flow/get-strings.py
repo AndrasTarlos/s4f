@@ -3,7 +3,16 @@
 
 
 def get_strings(city):
-    pass
+    obj = {}
+    for letter in city.lower():
+        if letter in obj:
+            obj[letter] += '*'
+        elif letter != ' ':
+            obj[letter] = '*'
+    items = []
+    for key in obj:
+        items.append(key + ':' + obj[key])
+    return ','.join(items)
 
 
 print(get_strings("Chicago"))    # "c:**,h:*,i:*,a:*,g:*,o:*"

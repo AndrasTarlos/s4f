@@ -3,7 +3,18 @@
 
 
 def solution(roman):
-    pass
+    lookup = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+    number = 0
+    lastVal = 0
+    for ch in roman[::-1]:
+        val = lookup[ch]
+        if lastVal > val:
+            number -= val
+        else:
+            number += val
+        lastVal = val
+
+    return number
 
 
 print(solution('XXI'))  # -> 21

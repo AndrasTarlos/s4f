@@ -3,7 +3,13 @@
 
 
 def find_digit(num, nth):
-    pass
+    if nth <= 0:
+        return -1
+    txt = str(abs(num))
+    pos = len(txt) - nth
+    if pos < 0:
+        return 0
+    return int(txt[pos])
 
 
 print(find_digit(5673, 4))  # returns 5

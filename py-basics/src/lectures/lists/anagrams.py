@@ -3,7 +3,12 @@
 
 
 def anagrams(word, words):
-    pass
+    word = ''.join(sorted(word))
+    filtered_words = []
+    for w in words:
+        if word == ''.join(sorted(w)):
+            filtered_words.append(w)
+    return filtered_words
 
 
 # Tests

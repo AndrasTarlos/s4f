@@ -7,8 +7,7 @@ der Liste enthalten ist. Benutzen Sie die nachfolgenden Tests zur Kontrolle.
 
 
 def includes(my_list, search_element):
-    # TODO
-    return False
+    return search_element in my_list
 
 
 # Tests
