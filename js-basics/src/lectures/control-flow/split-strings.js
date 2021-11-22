@@ -5,7 +5,13 @@
  */
 
 function solution(str) {
-    // TODO
+    if (!str || str == "")
+        return [];
+    str = str.length % 2 == 1 ? str += "_" : str;
+    result = [];
+    for (let i = 0; i < str.length; i += 2)
+        result.push(str.slice(i, i + 2));
+    return result;
 }
 
 console.log(solution("abcdef"));  // ["ab", "cd", "ef"]
