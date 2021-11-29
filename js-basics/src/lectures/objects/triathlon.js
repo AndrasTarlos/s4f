@@ -6,7 +6,14 @@
 
 function iTri(dist) {
     //its gonna be a long day!
-    // TODO
+    const totalDist = 2.4 + 112 + 26.2;
+    const toGo = (totalDist - dist).toFixed(2) + ' to go!';
+    if (dist === 0) return 'Starting Line... Good Luck!';
+    if (dist < 2.4) return { 'Swim': toGo };
+    if (dist < 2.4 + 112) return { 'Bike': toGo };
+    if (dist < totalDist - 10) return { 'Run': toGo };
+    if (dist < totalDist) return { 'Run': 'Nearly there!' };
+    return "You're done! Stop running!";
 }
 
 console.log('actual: ' + JSON.stringify(iTri(36)), 'expected: ' + JSON.stringify({ 'Bike': '104.60 to go!' }));

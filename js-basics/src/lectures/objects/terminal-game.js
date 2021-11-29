@@ -5,7 +5,13 @@
  */
 
 function Hero(name) {
-    // TODO
+    return {
+        name: name || 'Hero',
+        position: '00',
+        health: 100,
+        damage: 5,
+        experience: 0
+    };
 }
 
 console.log(Hero('Dani')); // { name: 'Dani', position: '00', health: 100, damage: 5, experience: 0 }

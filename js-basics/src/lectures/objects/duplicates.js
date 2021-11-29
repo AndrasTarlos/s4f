@@ -5,7 +5,19 @@
  */
 
 const removeDuplicateIds = (obj) => {
-    // TODO
+    let result = {};
+    let characters = [];
+    for (const [key, value] of Object.entries(obj).reverse()) {
+        let newValue = [];
+        for (const ch of value) {
+            if (!characters.includes(ch)) {
+                newValue.push(ch);
+                characters.push(ch);
+            }
+        }
+        result[key] = newValue;
+    }
+    return result;
 };
 
 console.log(removeDuplicateIds({
