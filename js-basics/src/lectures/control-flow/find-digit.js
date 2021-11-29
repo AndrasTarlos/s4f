@@ -6,10 +6,12 @@
 
 function findDigit(num, nth) {
     if (nth <= 0) return -1;
-    var txt = Math.abs(num).toString();
+    //var txt = Math.abs(num).toString();
+    var txt = String(num < 0 ? -num : num);
     var pos = txt.length - nth;
     if (pos < 0) return 0;
-    return Number(txt[pos]);
+    //return Number(txt[pos]);
+    return 1 * (txt[pos]);
 }
 
 console.log(findDigit(5673, 4));  // 5

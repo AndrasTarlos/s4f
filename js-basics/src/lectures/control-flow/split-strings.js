@@ -9,8 +9,11 @@ function solution(str) {
         return [];
     str = str.length % 2 == 1 ? str += "_" : str;
     result = [];
-    for (let i = 0; i < str.length; i += 2)
-        result.push(str.slice(i, i + 2));
+    for (let i = 0; i < str.length; i += 2) {
+        //result.push(str.slice(i, i + 2));
+        let start = i; let stop = start + 2;
+        result.push(str.substring(start, stop));
+    }
     return result;
 }
 
