@@ -18,4 +18,5 @@ function iTri(dist) {
 
 console.log('actual: ' + JSON.stringify(iTri(36)), 'expected: ' + JSON.stringify({ 'Bike': '104.60 to go!' }));
 console.log('actual: ' + JSON.stringify(iTri(103.5)), 'expected: ' + JSON.stringify({ 'Bike': '37.10 to go!' }));
-console.log('actual: ' + JSON.stringify(iTri(2)), 'expected: ' + JSON.stringify({ 'Bike': '138.60 to go!' }));
+console.log('actual: ' + JSON.stringify(iTri(0)), 'expected: ' + JSON.stringify('Starting Line... Good Luck!'));
+console.log('actual: ' + JSON.stringify(iTri(2)), 'expected: ' + JSON.stringify({ 'Swim': '138.60 to go!' }));
