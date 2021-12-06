@@ -14,6 +14,7 @@ console.log(numbers);
 
 function arrayFromRange(min, max) {
     const arr = [];
-    // TODO
+    for (let i = min; i <= max; i++)
+        arr.push(i);
     return arr;
 }

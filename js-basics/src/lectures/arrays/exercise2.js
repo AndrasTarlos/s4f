@@ -23,6 +23,14 @@ const output = includes([1, 2, 3, 4], 3);
 console.log(output);
 
 function includes(array, searchElement) {
-    // TODO
+    for (let element of array)
+        if (element === searchElement)
+            return true;
     return false;
+
+    // alternative Lösungen
+    return array.includes(searchElement);
+    return array.indexOf(searchElement) !== -1;
+    return array.find(e => e === searchElement) !== undefined;
+    return array.some(e => e === searchElement);
 }

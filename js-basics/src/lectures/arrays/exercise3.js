@@ -14,6 +14,8 @@ console.log(output);
 
 function except(array, excluded) {
     const output = [];
-    // TODO
+    for (let element of array)
+        if (!excluded.includes(element))
+            output.push(element);
     return output;
 }

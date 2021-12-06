@@ -21,6 +21,21 @@ const output = move([1, 2, 3, 4], 1, -2);
 console.log(output);
 
 function move(array, index, offset) {
-    // TODO
-    return [];
+    const position = index + offset;
+    if (position < 0 ||
+        position >= array.length) {
+        console.error("Invalid offset.");
+        return;
+    }
+
+    if (index < 0 ||
+        index >= array.length) {
+        console.error("Invalid index.");
+        return;
+    }
+
+    const output = [...array];
+    const element = output.splice(index, 1)[0];
+    output.splice(position, 0, element)
+    return output;
 }
