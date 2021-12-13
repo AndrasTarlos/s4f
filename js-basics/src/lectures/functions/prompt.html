@@ -21,6 +21,19 @@
         else {
             alter = parseInt(alter);
             if (alter) alert('Sie sind also ' + alter + ' Jahre alt!');
+            console.log(new Date().getFullYear()-alter)
+            if (isLeapYear(new Date().getFullYear()-alter) == true) {
+                alert("In einem Schaltjahr geboren.")
+            } else {
+                alert("Nicht in einem Schaltjahr geboren.")
+            }
         }
+    }
+
+    function isLeapYear(year) {
+        if (year % 400 === 0) return true;
+        if (year % 100 === 0) return false;
+        if (year % 4 === 0) return true;
+        return false;
     }
 </script>
