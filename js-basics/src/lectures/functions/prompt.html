@@ -1,0 +1,26 @@
+<button type="button" onclick="name_eingeben()">Namens-Eingabe</button>
+<button type="button" onclick="alter_eingeben()">Alters-Eingabe</button>
+<script language="javascript" type="text/javascript">
+    // Funktion zur Eingabe des Namens
+    // - Eingabedialog mit vorbelegtem Wert öffnen
+    // - Eingegebenen Wert in einem Meldungsdialog ausgeben
+    function name_eingeben() {
+        let name = window.prompt('Bitte geben Sie Ihren Namen ein.', 'Ihr Name hier');
+        if (name) alert('Sie heißen also ' + name);
+    }
+
+    // Funktion zur Eingabe des Alters
+    // - Prüfen, ob die Eingabe eine Zahl ist
+    // - Wenn nicht, entsprechende Meldung ausgeben
+    // - Eingabe zur weiteren Verarbeitung in einen Integer-Wert umwandeln
+    // - Meldung ausgeben
+    function alter_eingeben() {
+        let alter = window.prompt('Bitte geben Sie Ihr Alter ein.', '');
+        if (isNaN(alter))
+            alert('Sie haben keine Zahl eingegeben!');
+        else {
+            alter = parseInt(alter);
+            if (alter) alert('Sie sind also ' + alter + ' Jahre alt!');
+        }
+    }
+</script>

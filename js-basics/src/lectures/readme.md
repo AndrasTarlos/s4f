@@ -4,3 +4,4 @@
 3. [control-flow](control-flow)
 4. [objects](objects)
 5. [arrays](arrays)
+6. [functions](functions)

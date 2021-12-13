@@ -13,8 +13,8 @@ Lists:   https://www.w3schools.com/python/python_lists.asp
 def fizzbuzz(n):
     arr = []
     for i in range(1, n + 1):
-        fizz = i % 3 == 0;
-        buzz = i % 5 == 0;
+        fizz = i % 3 == 0
+        buzz = i % 5 == 0
 
         if fizz and buzz:
             arr.append("FizzBuzz")
